@@ -1,12 +1,4 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+NAME: Arquivos de Correção da disciplina de Fundamentos da Programação
+AUTHOR: @BernardoNilson, @Giraffa e @Silvia Moraes
+PURPOSE: Esse conjunto de exercícios buscam apresentar alguns programas, que tinham erros propositais de sintaxe, de lógica ou de execução.
+DATE: 24.03.2023
