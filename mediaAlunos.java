@@ -14,15 +14,15 @@ respectivamente.
 
         double notaUm, notaDois, notaTres, result;
 
-        Scanner entrada = new Scanner(System.in);
+        Scanner inScanner = new Scanner(System.in);
         System.out.println("Insira a 1º nota do aluno: ");
-        notaUm = entrada.nextInt();
+        notaUm = inScanner.nextInt();
 
         System.out.println("Insira a 2º nota do aluno: ");
-        notaDois = entrada.nextInt();
+        notaDois = inScanner.nextInt();
 
         System.out.println("Insira a 3º nota do aluno: ");
-        notaTres = entrada.nextInt();
+        notaTres = inScanner.nextInt();
 
         result = (notaUm*2 + notaDois*3 + notaTres*5)/10;
 

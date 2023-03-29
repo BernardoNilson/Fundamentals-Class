@@ -5,7 +5,7 @@ decomposto em horas, minutos e segundos.
  * @version: 25.03.2023
  */
 
- import java.util.Scanner;
+ import java.util.*;
 
  public class lerSegundos {
 
@@ -13,10 +13,10 @@ decomposto em horas, minutos e segundos.
 
         int segundos, minutos, horas;
 
-        Scanner entrada = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println("Insira o tempo que seja calcular, em segundos: ");
 
-        segundos = entrada.nextInt();
+        segundos = in.nextInt();
         horas = segundos / 3600;
         segundos = segundos % 3600;
         minutos = segundos / 60;
