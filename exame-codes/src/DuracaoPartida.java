@@ -5,7 +5,7 @@
  * 
  * @author: Bernardo Nilson
  * @version: 31.03.2023
- * Versão corrigido o sinal de 'maior que' nas linhas 39 e 44.
+ * 
  */
 
  import java.util.Scanner;
@@ -48,7 +48,7 @@
         
         //Calcular o valor a ser pago.
         int valorPago = 0;
-        //Conforme o enunciado, arrendonda-se sempre para cima.
+        //Conforme o enunciado, arrendonda-se sempre para cima. 
         if (resultadoMin != 0){
             valorPago = 90;
         }

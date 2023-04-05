@@ -5,7 +5,7 @@
  * 
  * @author: Bernardo Nilson
  * @version: 01.04.2023
- * Versão atualizada para receber variáveis do usuário.
+ * Versão atualizada para receber variáveis do usuário e corrigida a redundância de multiplicar por dois.
  */
 
  import java.util.Scanner;
@@ -24,18 +24,15 @@
         System.out.println("Insira o raio da 2º pista, em metros: ");
         raioDois = in.nextDouble();
 
-        //Calcula a area de ambas as semiesferas.
-        areaUm = 2*raioUm*Math.pow(Math.PI, 2);
-        areaDois = 2*raioDois*Math.pow(Math.PI, 2);
+        //Calcula a area de ambas as esferas.
+        areaUm = 4*raioUm*Math.pow(Math.PI, 2);
+        areaDois = 4*raioDois*Math.pow(Math.PI, 2);
         areaTotal = areaUm + areaDois;
 
         //Calcula a quantidade de latas de tinta necessárias.
         double lataTinta;
         lataTinta = areaTotal / 16;
         lataTinta = Math.ceil(lataTinta); //Arredonda para cima.
-
-        //Como são duas camadas, multiplica por dois.
-        lataTinta *= 2;
 
         //Exibe os cálculos ao usuário.
         System.out.println("A quantidade de latas de tinta necessárias foram: " + lataTinta);
