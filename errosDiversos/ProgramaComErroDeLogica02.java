@@ -1,6 +1,6 @@
 /**
- * Fundamentos de Programação - PUCRS
- * Verificando erros de execução e/ou compilação
+ * Fundamentos de Programaï¿½ï¿½o - PUCRS
+ * Verificando erros de execuï¿½ï¿½o e/ou compilaï¿½ï¿½o
  * 
  * @author Giraffa adaptado de Profa. Silvia Moraes
  * @author Bernardo Nilson
@@ -12,8 +12,9 @@ public class ProgramaComErroDeLogica02
 {
     public static void main(String args[]){
         Scanner entrada = new Scanner(System.in);
-        System.out.println("\fInforme o ano que você nasceu (usando 4 dígitos. ex: 1990): ");
+        System.out.println("\fInforme o ano que vocï¿½ nasceu (usando 4 dï¿½gitos. ex: 1990): ");
         int ano = entrada.nextInt();
-        System.out.println("Você tem (ou terá, nos próximos meses) " + -(ano-2023) +  " anos.");
+        entrada.close();
+        System.out.println("Vocï¿½ tem (ou terï¿½, nos prï¿½ximos meses) " + -(ano-2023) +  " anos.");
     }
 }

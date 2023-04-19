@@ -10,8 +10,8 @@
 
  import java.util.Scanner;
 
- public class maiorNumero
- {
+ public class MaiorNumero{
+
     public static void main (String [] args){
         
         Scanner in = new Scanner(System.in);
@@ -26,23 +26,25 @@
         System.out.println("Insira o valor da 3º variável: ");
         varTres = in.nextDouble();
         
+        in.close();
+
         //1º Versão
         if (varUm >= varDois && varUm >= varTres){
-            System.out.println("1ºMétodo: \nMaior número: " + varUm);
+            System.out.println("1ºMétodo:\nMaior número: " + varUm);
         }
         
         if (varDois >= varUm && varDois >= varTres){
-            System.out.println("1ºMétodo: \nMaior número: " + varDois);
+            System.out.println("1ºMétodo:\nMaior número: " + varDois);
         }
         
         if (varTres >= varDois && varTres >= varUm){
-            System.out.println("1ºMétodo: \nMaior número: " + varTres);
+            System.out.println("1ºMétodo:\nMaior número: " + varTres);
         }
         
         //2º Versão
         if (varUm >= varDois){
             if (varUm >= varTres){
-                System.out.println("2ºMétodo: \nMaior número: " + varUm);
+                System.out.println("2ºMétodo:\nMaior número: " + varUm);
             } else {
                 System.out.println("2ºMétodo: \nMaior número: " + varTres);
             }

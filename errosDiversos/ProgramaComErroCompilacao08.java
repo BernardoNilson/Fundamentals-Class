@@ -1,6 +1,6 @@
 /**
- * Fundamentos de Programação - PUCRS
- * Verificando erros de execução e/ou compilação
+ * Fundamentos de Programaï¿½ï¿½o - PUCRS
+ * Verificando erros de execuï¿½ï¿½o e/ou compilaï¿½ï¿½o
  * 
  * @author Giraffa adaptado de Profa. Silvia Moraes
  * @author Bernardo Nilson
@@ -14,6 +14,7 @@ public class ProgramaComErroCompilacao08
         Scanner entrada = new Scanner(System.in);
         System.out.println("\fInforme um valor inteiro: ");
         int valor = entrada.nextInt();
-        System.out.println("Você digitou o número inteiro: " + valor);
+        entrada.close();
+        System.out.println("Vocï¿½ digitou o nï¿½mero inteiro: " + valor);
     }
 }

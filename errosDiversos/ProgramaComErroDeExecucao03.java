@@ -1,6 +1,6 @@
 /**
- * Fundamentos de Programação - PUCRS
- * Verificando erros de execução e/ou compilação
+ * Fundamentos de Programaï¿½ï¿½o - PUCRS
+ * Verificando erros de execuï¿½ï¿½o e/ou compilaï¿½ï¿½o
  * 
  * @author Giraffa adaptado de Profa. Silvia Moraes
  * @author Bernardo Nilson
@@ -16,8 +16,8 @@ public class ProgramaComErroDeExecucao03
         double valor1 = entrada.nextInt();
         System.out.println("Informe o segundo valor inteiro: ");
         double valor2 = entrada.nextInt();
-
-        System.out.println("Média Harmônica: " + (2 / (1/valor1 + 1/valor2)));
+        entrada.close();
+        System.out.println("Mï¿½dia Harmï¿½nica: " + (2 / (1/valor1 + 1/valor2)));
         System.out.println("Show!!! Agora, esse programa funciona!!");
     }
 }

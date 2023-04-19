@@ -16,6 +16,8 @@ decomposto em horas, minutos e segundos.
         Scanner in = new Scanner(System.in);
         System.out.println("Insira o tempo que seja calcular, em segundos: ");
 
+        in.close();
+
         segundos = in.nextInt();
         horas = segundos / 3600;
         segundos = segundos % 3600;

@@ -8,22 +8,24 @@ respectivamente.
 
  import java.util.Scanner;
 
- public class mediaAlunos {
+ public class MediaAlunos{
 
     public static void main (String [] args){
 
         double notaUm, notaDois, notaTres, result;
 
-        Scanner inScanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Insira a 1º nota do aluno: ");
-        notaUm = inScanner.nextInt();
+        notaUm = scan.nextInt();
 
         System.out.println("Insira a 2º nota do aluno: ");
-        notaDois = inScanner.nextInt();
+        notaDois = scan.nextInt();
 
         System.out.println("Insira a 3º nota do aluno: ");
-        notaTres = inScanner.nextInt();
+        notaTres = scan.nextInt();
 
+        scan.close();
+        
         result = (notaUm*2 + notaDois*3 + notaTres*5)/10;
 
         System.out.println("Média calculada: " + result);

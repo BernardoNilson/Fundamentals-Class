@@ -30,6 +30,8 @@
         System.out.println("Insira o minuto final da partida: ");
         minFinal = in.nextInt();
 
+        in.close();
+
         //Agora, calculo a duração da partida, usando novas variáveis.
         int resultadoHora, resultadoMin;
         resultadoHora = horaFinal - horaInicial;

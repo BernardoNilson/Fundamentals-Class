@@ -1,7 +1,7 @@
 /**
  /**
- * Fundamentos de Programação - PUCRS
- * Verificando erros de execução e/ou compilação
+ * Fundamentos de Programaï¿½ï¿½o - PUCRS
+ * Verificando erros de execuï¿½ï¿½o e/ou compilaï¿½ï¿½o
  * 
  * @author Giraffa adaptado de Profa. Silvia Moraes
  * @author Bernardo Nilson
@@ -17,8 +17,9 @@ public class ProgramaComErroDeLogica08
         double valor1 = entrada.nextInt();
         System.out.println("Informe o segundo valor inteiro: ");
         double valor2 = entrada.nextInt();
+        entrada.close();
         double media = (valor1 + valor2) / 2;
-        System.out.println("Média Aritmética: " + media);
+        System.out.println("Mï¿½dia Aritmï¿½tica: " + media);
     }
 
 }

@@ -16,6 +16,7 @@ public class ProgramaComErroCompilacao09
         int valor1 = entrada.nextInt();
         System.out.println("\fInforme o segundo valor inteiro: ");
         int valor2 = entrada.nextInt();
+        entrada.close();
         System.out.println("Resultado da soma: " + (valor1+valor2));
     
     }

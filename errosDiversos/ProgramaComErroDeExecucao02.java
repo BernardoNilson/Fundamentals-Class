@@ -1,6 +1,6 @@
 /**
- * Fundamentos de Programação - PUCRS
- * Verificando erros de execução e/ou compilação
+ * Fundamentos de Programaï¿½ï¿½o - PUCRS
+ * Verificando erros de execuï¿½ï¿½o e/ou compilaï¿½ï¿½o
  * 
  * @author Giraffa adaptado de Profa. Silvia Moraes
  * @author Bernardo Nilson
@@ -14,6 +14,7 @@ public class ProgramaComErroDeExecucao02
         Scanner entrada = new Scanner(System.in);
         System.out.println("Informe um valor inteiro: ");
         double valor1 = entrada.nextInt();
+        entrada.close();
         double valor2 = 10;
         System.out.println("\fResultado 1: " + (valor2/valor1));
         System.out.println("Resultado 2: " + (valor1/valor2));

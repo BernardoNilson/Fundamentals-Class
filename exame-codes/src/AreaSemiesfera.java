@@ -24,6 +24,8 @@
         System.out.println("Insira o raio da 2º pista, em metros: ");
         raioDois = in.nextDouble();
 
+        in.close();
+
         //Calcula a area de ambas as esferas.
         areaUm = 4*raioUm*Math.pow(Math.PI, 2);
         areaDois = 4*raioDois*Math.pow(Math.PI, 2);
