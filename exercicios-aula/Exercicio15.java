@@ -6,15 +6,13 @@
  * @version: 26.04.2023
  */
 
- import java.util.Scanner;
-
+import java.util.Scanner;
+import biblioteca.Biblioteca;
+ 
  public class Exercicio15{
 
     public static void main (String [] args){
-
-        Scanner scan = new Scanner(System.in);  
-
-        
+        //codigo
     }
  }
  
