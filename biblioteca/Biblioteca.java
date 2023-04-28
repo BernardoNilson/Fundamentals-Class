@@ -112,52 +112,268 @@ package biblioteca;
     }
 
 
-    public static int somaDivisores(int quantDivisores){
+    public static int somaDivisores(int num){
         int somaDivisores = 0;
-        while (quantDivisores >= 0){
-            somaDivisores += quantDivisores;
-            quantDivisores--;
+        int count = 1;
+        while (count <= num){
+            if (num % count == 0) somaDivisores += count;
+            count++;
         }
         return somaDivisores;
     }
 
-    public static int somaDivisoresP(int quantDivisoresP){
+    public static int somaDivisoresP(int num){
         int somaDivisoresP = 0;
-        while (quantDivisoresP >= 0){
-            somaDivisoresP += quantDivisoresP;
-            quantDivisoresP--;
+        int count = 1;
+        while (count < num){
+            if (num % count == 0) somaDivisoresP += count;
+            count++;
         }
         return somaDivisoresP;
     }
 
-    //Verificão se tal número é verdadeiro.
-    public static boolean verificaPrimo(int num){
-        if (quantDivisores(num)==2) return true;
-        else return false;
+    public static int inverteDigito (int num){
+        int numReverso = 0;
+        while (num > 0){
+            numReverso = numReverso*10 + num % 10;
+            num /= 10;
+        }
+        return numReverso;
     }
 
-    public static boolean verificaPar(int num){
-        if (num % 2 == 0) return true;
-        else return false;
+    public static int quantidadeDiaAniversario(int mesNascimento, int diaNascimento, int anoHoje){
+        int diaAniversario = 0;
+
+        switch (mesNascimento){
+            case 1:
+                diaAniversario = diaNascimento;
+                break;
+            case 2:
+                diaAniversario = diaNascimento + 31;
+                break;
+            case 3:
+                diaAniversario = diaNascimento + 59;
+                break;
+            case 4:
+                diaAniversario = diaNascimento + 90;
+                break;
+            case 5:
+                diaAniversario = diaNascimento + 120;
+                break;
+            case 6:
+                diaAniversario = diaNascimento + 151;
+                break;
+            case 7:
+                diaAniversario = diaNascimento + 181;
+                break;
+            case 8:
+                diaAniversario = diaNascimento + 212;
+                break;
+            case 9:
+                diaAniversario = diaNascimento + 243;
+                break;
+            case 10:
+                diaAniversario = diaNascimento + 273;
+                break;
+            case 11:
+                diaAniversario = diaNascimento + 304;
+                break;
+            case 12:
+                diaAniversario = diaNascimento + 334;
+                break;
+            default:
+                System.out.println("Opaaa... Data inválida");
+        }
+
+        if ((mesNascimento > 2)&&(verificaBissexto(anoHoje))) diaAniversario++;
+
+        return diaAniversario;
+    }
+
+    public static int quantidadeDiaHoje(int mesHoje, int diaHoje, int anoHoje){
+        int diaAtual = 0;
+
+        switch (mesHoje){
+            case 1:
+                diaAtual = diaHoje;
+                break;
+            case 2:
+                diaAtual = diaHoje + 31;
+                break;
+            case 3:
+                diaAtual = diaHoje + 59;
+                break;
+            case 4:
+                diaAtual = diaHoje + 90;
+                break;
+            case 5:
+                diaAtual = diaHoje + 120;
+                break;
+            case 6:
+                diaAtual = diaHoje + 151;
+                break;
+            case 7:
+                diaAtual = diaHoje + 181;
+                break;
+            case 8:
+                diaAtual = diaHoje + 212;
+                break;
+            case 9:
+                diaAtual = diaHoje + 243;
+                break;
+            case 10:
+                diaAtual = diaHoje + 273;
+                break;
+            case 11:
+                diaAtual = diaHoje + 304;
+                break;
+            case 12:
+                diaAtual = diaHoje + 334;
+                break;
+            default:
+                System.out.println("Opaaa... Data inválida");
+        }
+        
+        if ((mesHoje > 2)&&(verificaBissexto(anoHoje))) diaAtual++;
+
+        return diaAtual;
+    }
+
+    public static String obterSigno(int mesNascimento, int diaNascimento){
+
+        //Definimos signo como um espaço vazio porque o programa não sabe lidar com a variável não declarada.
+        String signo = "";
+
+        switch (mesNascimento){
+            case 1:
+                if(diaNascimento <= 20) signo = "Capricórnio";
+                 else signo = "Aquário";
+                break;
+            case 2:
+                if(diaNascimento <= 18) signo = "Aquário";
+                 else signo = "Peixes";
+                break;
+            case 3:
+                if(diaNascimento <= 20) signo = "Peixes";
+                 else signo = "Áries";
+                break;
+            case 4:
+                if(diaNascimento <= 20) signo = "Áries";
+                 else signo = "Touro";
+                break;
+            case 5:
+                if(diaNascimento <= 20) signo = "Touro";
+                 else signo = "Gêmeos";
+                break;
+            case 6:
+                if(diaNascimento <= 20) signo = "Gêmeos";
+                 else signo = "Câncer";
+                break;
+            case 7:
+                if(diaNascimento <= 22) signo = "Câncer";
+                 else signo = "Leão";
+                break;
+            case 8:
+                if(diaNascimento <= 22) signo = "Leão";
+                 else signo = "Virgem";
+                break;
+            case 9:
+                if(diaNascimento <= 22) signo = "Virgem";
+                 else signo = "Libra";
+                break;
+            case 10:
+                if(diaNascimento <= 22) signo = "Libra";
+                 else signo = "Escorpião";
+                break;
+            case 11:
+                if(diaNascimento <= 21) signo = "Escorpião";
+                 else signo = "Sagitário";
+                break;
+            case 12:
+                if(diaNascimento <= 21) signo = "Sagitário";
+                 else signo = "Capricórnio";
+                break;
+            default:
+                System.out.println("Opaaa... Data inválida");
+        }
+        
+        return signo;
+    }
+
+    //Verificão se tal número é verdadeiro.
+    public static boolean verificaPrimo(int num){
+        return quantDivisores(num)==2;
+    }
+
+    public static boolean verificaPar(double num){
+        return num % 2 == 0;
     }
 
     public static boolean verificaPerfeito(int num){
-        if (somaDivisoresP(quantDivisoresP(num)) == num) return true;
-        else return false;
+        return somaDivisoresP(num) == num;
     }
 
     public static boolean verificaAbundante(int num){
-        if (somaDivisoresP(quantDivisoresP(num)) >= num) return true;
-        else return false;
+        return somaDivisoresP(num) >= num;
     }
 
     public static boolean verificaDefectivo(int num){
-        if (somaDivisoresP(quantDivisoresP(num)) <= num) return true;
-        else return false;
+        return somaDivisoresP(num) <= num;
     }
 
     public static boolean verificaAmigo(int num, int numDois){
-        if ((somaDivisoresP(quantDivisoresP(num)) == numDois)&&(somaDivisoresP(quantDivisoresP(numDois)) == num)) return true;
+        return (somaDivisoresP(num) == numDois)&&(somaDivisoresP(numDois) == num);
+    }
+
+    public static boolean verificaNatural(double num){
+        return num >= 0;
+    }
+
+    public static boolean verificaPalindromo(int num){
+        return num == inverteDigito(num);
+    }
+
+    public static boolean verificaBissexto(int anoHoje){
+        if (anoHoje % 4 == 0 && (anoHoje % 100 != 0 || (anoHoje % 400 == 0 && anoHoje % 100 == 0))) return true;
         else return false;
+    }
+
+    public static void verificaAniversario (int diaAniversario, int mesAniversario, int diaHoje, int mesHoje, int anoHoje){
+        //Por meio de um método, calcula a quantidade de dias até o dia do aniversário.
+        int quantDiaAniversario = quantidadeDiaAniversario(mesAniversario, diaAniversario, anoHoje);
+        
+        //Por meio de um método, calcula a quantidade de dias até o dia atual.
+        int quantDiaHoje = quantidadeDiaHoje(mesHoje, diaHoje, anoHoje);
+
+        //Parte final, executa os comandos ao usuário e exibe tudo o que foi calculado.
+        if (quantDiaAniversario == quantDiaHoje){
+            System.out.println("Parabéns! Hoje é o seu aniversário.");
+        } else {
+            if (quantDiaAniversario > quantDiaHoje){
+            System.out.println("Que pena! Ainda faltam " + (quantDiaAniversario-quantDiaHoje) + " dias para o seu aniversário!");
+            } else {
+            System.out.println("Que pena! Seu aniversário já passou! Por apenas " + (quantDiaHoje-quantDiaAniversario) + " dias!");
+            }
+        } 
+    }
+
+    public static void imprimeDecrescente (double numA, double numB, double numC){
+        //Para isso, vamos fazer o uso de uma variável auxiliar.
+        //O maior número é calculado primeiro.
+        double maior = numA;
+        if (numB > maior) maior = numB;
+        if (numC > maior) maior = numC;
+
+        //Agora, calculamos o menor número.
+        double menor = numA;
+        if (numB < menor) menor = numB;
+        if (numC < menor) menor = numC;
+
+        //Por fim, o número que está no meio dos dois.
+        double meio = numA;
+        if ((numB < maior)&&(numB > menor)) meio = numB;
+        if ((numC < maior)&&(numC > menor)) meio = numC;
+
+        System.out.println("A ordem decrescente dos números é " + maior + ", " + meio + " e " + menor);
     }
 }
