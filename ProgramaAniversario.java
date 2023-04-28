@@ -54,7 +54,7 @@
             System.out.println("Que pena! Ainda faltam " + (diaAniversario-diaAtual) + " para completar " + (anoHoje-anoNascimento) + " anos... Seu signo é " + signo);
         }
         if (diaAniversario < diaAtual) {
-            System.out.println("Que pena! Seu aniversário já passou... Seu signo é " + signo + " e você possui " + (anoNascimento-anoHoje) + " anos e " + (diaHoje-diaNascimento) + " dias!");
+            System.out.println("Que pena! Seu aniversário já passou... Seu signo é " + signo + " e você possui " + (anoHoje-anoNascimento) + " anos e " + (diaHoje-diaNascimento) + " dias!");
         }
 
 
