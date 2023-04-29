@@ -1,2 +1,2 @@
 # Fundamentals-Class
-O intuito deste repositório é armazenar os programas, códigos e exercícios desenvolvidos na disciplina de Fundamentos da Computação da PUCRS.
+The goal of this repository is to storage all codes, programs and exercises of the Programming Fundamentals class at PUCRS!
