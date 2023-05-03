@@ -21,13 +21,10 @@ public class VowelCount {
 
         //Here, it scan the whole line, not only a word.
         System.out.println("Please, insert your phrase:");
-        String phrase = scan.nextLine();
+        String phrase = scan.nextLine().toLowerCase(); //To avoid uppercase errors, this method reduces everything to lowercase
       
         //Closes the Scanner object
         scan.close();
-
-        //To avoid uppercase errors, this method reduces everything to lowercase
-        phrase = phrase.toLowerCase();
 
         //Put all vowels in an array
         char[] vowel = {'a','e','i','o','u'};
@@ -35,16 +32,12 @@ public class VowelCount {
 
         //For each phrase's position, it compare to the vowels.
         for (int i = 0; i < phrase.length(); i++){
-
-            char character = phrase.charAt(i);
-
             for (int ii = 0; ii < vowel.length; ii++){
-                if (character==vowel[ii]){
+                if (phrase.charAt(i)==vowel[ii]){
                     vowelCount++;
                     break; //Otimize the program
                 }
             }
-
         }
 
         //Show the result to the user
