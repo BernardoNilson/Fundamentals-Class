@@ -30,20 +30,22 @@ public class WordPyramid {
 
         //Closes the Scanner object
         scan.close();
+        
+        //Starts the counting til the number of lines required.
+        for (int i = 0; i < word.length()*2; i++){ 
 
-        String auxString = "";
+            int limit; 
+            if (i < word.length()) limit = i; //Define the limit to the counter i - increase position
+            else limit = word.length()*2 - i; //Define the limit to the counter i, negatively - decrease position
 
-        for (int i = 0; i < word.length(); i++){
-            //System.out.println(word.charAt(i));
-            auxString += word.charAt(i);
-            System.out.println(auxString);
+            //Show, using only "print", not "println", the character sequence til the limit
+            for (int j = 0; j < limit; j++){
+                System.out.print(word.charAt(j));
+            }
+
+            //To skip to next line
+            System.out.println();
         }
-        for (int i = word.length(); i > 0; i--){
-        }
-
-        //Show the result to the user
-        //System.out.println("Number of words found: ");
-
         //END
     }
 }
