@@ -9,6 +9,8 @@ package stringExercises;
  * Jav
  * Ja
  * J
+ *  - 1º Method: Using charAt();
+ *  - 2º Method: Using substring();
  * 
  * @author: Bernardo Nilson 
  * @version: 03.05.2023
@@ -30,7 +32,8 @@ public class WordPyramid {
 
         //Closes the Scanner object
         scan.close();
-        
+
+        //Using chatAt();
         //Starts the counting til the number of lines required.
         for (int i = 0; i < word.length()*2; i++){ 
 
@@ -46,6 +49,13 @@ public class WordPyramid {
             //To skip to next line
             System.out.println();
         }
+
+        //Using substring();
+        for (int i = 0; i < word.length()*2; i++){ 
+            if (i <= word.length()) System.out.println(word.substring(0, i));
+            else System.out.println(word.substring(0, (word.length()*2 - i)));
+        }
+
         //END
     }
 }

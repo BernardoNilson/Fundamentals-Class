@@ -10,7 +10,7 @@
 
  import java.util.Scanner;
 
- public class MaiorNumero{
+ public class MaiorNumero {
 
     public static void main (String [] args){
         
