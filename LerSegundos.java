@@ -7,7 +7,7 @@ decomposto em horas, minutos e segundos.
 
  import java.util.*;
 
- public class lerSegundos {
+ public class LerSegundos {
 
     public static void main (String [] args){
 
