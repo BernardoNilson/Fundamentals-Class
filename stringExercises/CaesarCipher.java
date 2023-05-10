@@ -73,7 +73,7 @@ public class CaesarCipher {
 
         if (unlockKey == position) System.out.println("Congrats! You've guessed right!");
         else {
-            System.out.println("Unfortunately, you haven't guessed!");
+            System.out.println("Unfortunately, you didn't guess right!");
             System.out.println("The encryption system works like the Caesar Cipher, deslocating the alphabet in " + position + " positions!");
         }
 
