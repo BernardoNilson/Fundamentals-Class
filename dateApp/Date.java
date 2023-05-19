@@ -65,4 +65,37 @@ public class Date {
         }
         return "Ops, something wrong happend!"; 
     }
+
+    public boolean verifyLeapYear (){
+        return (year % 4 == 0 && (year % 100 != 0 || (year % 400 == 0 && year % 100 == 0)));
+    }
+
+    public String showSoulsDay (){
+        return "Souls' Day is in November 2, " + year;
+    }
+
+    public boolean verifyDateExistence (){
+
+        int [] monthThirtyOne = {0, 2, 4, 6, 7, 9, 11};
+        int [] monthThirty = {3, 5, 8, 10};
+        int [] monthTwentyEight = {1};
+
+        for (int i = 0; i <= 11 ; i++){
+
+            if (((month-1) == monthThirtyOne [i])&&((day > 0)&&(day <= 31))){
+                return true;
+            }
+            if (((month-1) == monthThirty [i])&&((day > 0)&&(day <= 30))){
+                return true;
+            }
+            if (verifyLeapYear() && ((month-1) == monthTwentyEight [i])&&((day > 0)&&(day <= 29))){
+                return true;
+            }
+            if (!verifyLeapYear() && ((month-1) == monthTwentyEight [i])&&((day > 0)&&(day <= 28))){
+                return true; 
+            }
+        }
+        return false;
+    }
+
 }
