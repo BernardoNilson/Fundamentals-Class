@@ -2,48 +2,60 @@ package triangleApp;
 
 /**
  * Undertanding the problem: Create a class Rectangle with the basics methods and atributes.
- * Also, rectangle area, perimeter and the diagnonal (Pitagoras). After that, you need to create two objects.
+ * Implement methods to verify the type of that triangle (isosceles, scalene and equilateral), the area and the perimeter.
+ * After doing this, create two objects in AppTriangle, using the main methods.
  * 
  * @author: Bernardo Nilson
- * @version: 17.05.2023
+ * @version: 18.05.2023
  */
 
- import java.util.*;
+import java.util.*;
+import java.text.DecimalFormat;
 
- public class AppTriangle {
+public class AppTriangle {
 
-    public static void main (String [] args){
-        
-        //Create the Scanner object
-        Scanner scan = new Scanner (System.in);
+    public static void main(String[] args) {
+
+        // Creates the Scanner object
+        Scanner scan = new Scanner(System.in);
+        // Creates a Formatter object
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.000");
 
         System.out.print("\033\143");
-        System.out.println("Hey, this program create two rectangles objects!\n");
+        System.out.println("Hey, this program create two triangles objects!\n");
 
-        //Receives the parameters and put them in variables
-        System.out.println("Please, insert the base and the height (double), separates by one space:");
+        // Receives the parameters and put them in variables, so it can be used to
+        // create the object.
+        System.out.println("Please, insert the values for base of the first triangle:");
         double base = scan.nextDouble();
-        double height = scan.nextDouble();
+        System.out.println("Now, the values for left side and right side, separated by space:");
+        double leftSide = scan.nextDouble();
+        double rightSide = scan.nextDouble();
 
-        //Create the first rectangle using the parameters
-        Rectangle firstRectangle = new Rectangle(base, height);
+        // Creates the first triangle using the parameters
+        Triangle firstTriangle = new Triangle(base, leftSide, rightSide);
 
-        //Receives the parameters and put them in variables
-        System.out.println("Please, insert the base and the height (double), separates by one space:");
+        // Receives the parameters and put them in variables, so it can be used to
+        // create the object.
+        System.out.println("Please, insert the values for base of the second triangle:");
         base = scan.nextDouble();
-        height = scan.nextDouble();
+        System.out.println("Now, the values for left side and right side, separated by space:");
+        leftSide = scan.nextDouble();
+        rightSide = scan.nextDouble();
 
-        //Close the Scanner
+        // Closes the Scanner
         scan.close();
 
-        //Create the second rectangle using the parameters
-        Rectangle secondRectangle = new Rectangle(base, height);
+        // Creates the second rectangle using the parameters
+        Triangle secondTriangle = new Triangle(base, leftSide, rightSide);
 
-        //Exibes everything to the user
-        System.out.print("\nFirst rectangle area is equal to " + firstRectangle.calcuteArea() + "\nFirst rectangle perimeter is equal to " + firstRectangle.calculatePerimeter() + "\nFirst rectangle diagonal is equal to ");
-        System.out.printf("%.2f", firstRectangle.calculateDiagonal());
+        // Shows everything to the user
+        System.out.println("\nSo, the first traingle is: " + firstTriangle.verifyType());
+        System.out.println("- Total perimeter: " + firstTriangle.calculatePerimeter() + " meters\n- Total area: "
+                + decimalFormat.format(firstTriangle.calcuteArea()) + " square meters");
 
-        System.out.print("\n\nSecond rectangle area is equal to " + secondRectangle.calcuteArea() + "\nSecond rectangle perimeter is equal to " + secondRectangle.calculatePerimeter() + "\nSecond rectangle diagonal is equal to ");
-        System.out.printf("%.2f", secondRectangle.calculateDiagonal());
+        System.out.println("\nSo, the second traingle is: " + secondTriangle.verifyType());
+        System.out.println("- Total perimeter: " + secondTriangle.calculatePerimeter() + " meters\n- Total area: "
+                + decimalFormat.format(secondTriangle.calcuteArea()) + " square meters");
     }
- }
+}
