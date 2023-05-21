@@ -8,7 +8,7 @@ package dateApp;
  * 
  * 
  * @author: Bernardo Nilson
- * @version: 19.05.2023
+ * @version: 21.05.2023
  */
 
 import java.util.*;
@@ -37,6 +37,21 @@ public class AppDate {
         scan.close();
 
         // Shows everything to the user
-        System.out.println(firstDate.verifyDateExistence());
+        if (firstDate.verifyDateExistence()) {
+            System.out.println("\nYour date is valid");
+        } else {
+            System.out.println("\nYour date is not valid, sorry!");
+            System.exit(0);
+        }
+
+        System.out.println("\nSo, this month is " + firstDate.showMonthFull() + "\n");
+
+        if (firstDate.verifyLeapYear()) {
+            System.out.println("Wow, we are in a Leap Year!");
+        } else {
+            System.out.println("Unfotunately, we are not in a Leap Year! :(");
+        }
+
+        System.out.println("\n" + firstDate.showSoulsDay());
     }
 }

@@ -1,13 +1,15 @@
 package dateApp;
 
 /**
- * Undertanding the problem: Create a class Date with the basics methods and atributes.
- * Implement methods to return the month in full (written), to verify if it is a leap year, 
+ * Undertanding the problem: Create a class Date with the basics methods and
+ * atributes.
+ * Implement methods to return the month in full (written), to verify if it is a
+ * leap year,
  * to verify if it is a valid date and return (as a String) the Souls' Day.
  * After doing this, create a object in AppDate and show the results.
  * 
  * @author: Bernardo Nilson
- * @version: 19.05.2023
+ * @version: 21.05.2023
  */
 
 public class Date {
@@ -17,8 +19,9 @@ public class Date {
     private int month;
     private int year;
 
-    // Constructor, I choose to use "this" because the variables have the same name as the atributes
-    public Date (int day, int month, int year) {
+    // Constructor, I choose to use "this" because the variables have the same name
+    // as the atributes
+    public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
@@ -56,46 +59,45 @@ public class Date {
     }
 
     // Return the month in full (written) using array and repetition
-    public String showMonthFull (){
-        String [] monthFull = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"};
-        for (int i = 0; i < 12; i++){
-            if (i == (month - 1)){
-                return monthFull [i];
+    public String showMonthFull() {
+        String[] monthFull = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "Octuber", "November", "December" };
+        for (int i = 0; i < 12; i++) {
+            if (i == (month - 1)) {
+                return monthFull[i];
             }
         }
-        return "Ops, something wrong happend!"; 
+        return "Ops, something wrong happend!";
     }
 
-    public boolean verifyLeapYear (){
+    // Verify if the inserted year is a leap year (366 days)
+    public boolean verifyLeapYear() {
         return (year % 4 == 0 && (year % 100 != 0 || (year % 400 == 0 && year % 100 == 0)));
     }
 
-    public String showSoulsDay (){
+    // Just return the Souls' Day in that year
+    public String showSoulsDay() {
         return "Souls' Day is in November 2, " + year;
     }
 
-    public boolean verifyDateExistence (){
+    // Verify if the date is valid using the switch case to compare each month
+    public boolean verifyDateExistence() {
+        switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12:
+                return day > 0 && day <= 31;
 
-        int [] monthThirtyOne = {0, 2, 4, 6, 7, 9, 11};
-        int [] monthThirty = {3, 5, 8, 10};
-        int [] monthTwentyEight = {1};
+            case 4, 6, 9, 11:
+                return day > 0 && day <= 30;
 
-        for (int i = 0; i <= 11 ; i++){
+            case 2:
+                if (verifyLeapYear()) {
+                    return day > 0 && day <= 29;
+                } else {
+                    return day > 0 && day <= 28;
+                }
 
-            if (((month-1) == monthThirtyOne [i])&&((day > 0)&&(day <= 31))){
-                return true;
-            }
-            if (((month-1) == monthThirty [i])&&((day > 0)&&(day <= 30))){
-                return true;
-            }
-            if (verifyLeapYear() && ((month-1) == monthTwentyEight [i])&&((day > 0)&&(day <= 29))){
-                return true;
-            }
-            if (!verifyLeapYear() && ((month-1) == monthTwentyEight [i])&&((day > 0)&&(day <= 28))){
-                return true; 
-            }
+            default:
+                return false;
         }
-        return false;
     }
-
 }
