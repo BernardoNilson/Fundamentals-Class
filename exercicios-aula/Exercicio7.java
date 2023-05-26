@@ -8,7 +8,8 @@
 
  
 import java.util.Scanner;
-import biblioteca.Biblioteca;
+
+import library.library;
   
   public class Exercicio7{
  
@@ -27,13 +28,13 @@ import biblioteca.Biblioteca;
                 num = scan.nextInt();
             } while (num < 0);
 
-            if (Biblioteca.verificaPrimo(num)) quantPrimo++;
+            if (library.verificaPrimo(num)) quantPrimo++;
             if (num > aux) aux = num;
         }
 
         scan.close();
 
-        if (Biblioteca.verificaPrimo(aux)) System.out.println("O maior número lido é primo: " + aux);
+        if (library.verificaPrimo(aux)) System.out.println("O maior número lido é primo: " + aux);
          else System.out.println("O maior número lido não é primo: " + aux);
         
         System.out.println("A quantidade de números primos lidos, no total, é " + quantPrimo);

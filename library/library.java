@@ -1,4 +1,4 @@
-package biblioteca;
+package library;
 
 /**
  * Biblioteca com intuito de complementar as atividades avaliativas de Fundamentos de Programação.
@@ -8,7 +8,7 @@ package biblioteca;
  * @version: 18.04.2023
  */
 
- public class Biblioteca{
+ public class library{
 
     //Métodos para cálculo da área.
     public static double areaCirculo(double raioC){
@@ -305,7 +305,7 @@ package biblioteca;
         return quantDivisores(num)==2;
     }
 
-    public static boolean verificaPar(double num){
+    public static boolean isEven(double num){
         return num % 2 == 0;
     }
 

@@ -7,7 +7,8 @@
  */
 
 import java.util.Scanner;
-import biblioteca.Biblioteca;
+
+import library.library;
 
 public class Exercicio6 {
 
@@ -27,7 +28,7 @@ public class Exercicio6 {
                 num = scan.nextInt();
             } while (num < 0);
 
-            if (Biblioteca.verificaPrimo(num))
+            if (library.verificaPrimo(num))
                 quantPrimo++;
         }
 

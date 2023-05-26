@@ -7,7 +7,8 @@
  */
 
 import java.util.Scanner;
-import biblioteca.Biblioteca;
+
+import library.library;
  
  public class Exercicio15{
 
@@ -25,8 +26,8 @@ import biblioteca.Biblioteca;
         do {
             System.out.println("Digite um número REAL: ");
             num = scan.nextDouble();
-            if (Biblioteca.verificaNatural(num)){
-                if (Biblioteca.verificaPar(num)) quantPar++;
+            if (library.verificaNatural(num)){
+                if (library.isEven(num)) quantPar++;
                  else quantImpar++;
             }
             count++;

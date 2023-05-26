@@ -5,7 +5,7 @@
  * @version: 27.04.2023
  */
 
- import biblioteca.Biblioteca;
+ import library.library;
   
   public class Exercicio9{
  
@@ -15,7 +15,7 @@
         int count = 1;
 
         while (quantPrimo < 100){
-            if (Biblioteca.verificaPrimo(count)){
+            if (library.verificaPrimo(count)){
                quantPrimo++;
                System.out.println(count);
             } 

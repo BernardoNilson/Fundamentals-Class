@@ -5,7 +5,7 @@
  * @version: 27.04.2023
  */
 
- import biblioteca.Biblioteca;
+ import library.library;
   
   public class Exercicio12{
  
@@ -15,7 +15,7 @@
 
         for (int count = 1; count <= 1000; count++){
             for (int countDois = count + 1; countDois <= 1000; countDois++){ //Com o  objetivo de otimizar e evitar a contagem dupla, começa a varredura a partir do ponto que o loop anterior parou.
-                if (Biblioteca.verificaAmigo(count, countDois)&&(count!=countDois)){ //A segunda espressão evite que inclua números perfeitos na contagem.
+                if (library.verificaAmigo(count, countDois)&&(count!=countDois)){ //A segunda espressão evite que inclua números perfeitos na contagem.
                     quantAmigos++;
                     System.out.println(count + " " + countDois); 
                 }

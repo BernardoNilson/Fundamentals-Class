@@ -5,7 +5,7 @@
  * @version: 27.04.2023
  */
 
- import biblioteca.Biblioteca;
+ import library.library;
   
   public class Exercicio10{
  
@@ -15,7 +15,7 @@
         int count = 1;
 
         while (count <= 1000){
-            if (Biblioteca.verificaPerfeito(count)){
+            if (library.verificaPerfeito(count)){
                quantPerfeito++;
                System.out.println(count);
             } 

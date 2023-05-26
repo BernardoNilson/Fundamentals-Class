@@ -8,7 +8,8 @@
  */
 
 import java.util.Scanner;
-import biblioteca.Biblioteca;
+
+import library.library;
 
 public class Exercicio1{
 
@@ -33,7 +34,7 @@ public class Exercicio1{
             } while ((numA==numB)||(numA==numC)||(numB==numC));
 
             //Imprime os números em ordem decrescente.
-            Biblioteca.imprimeDecrescente(numA, numB, numC);
+            library.imprimeDecrescente(numA, numB, numC);
 
             //Verifica, em todas as leituras, qual foi o maior número lido.
             if (numA > aux) aux = numA;

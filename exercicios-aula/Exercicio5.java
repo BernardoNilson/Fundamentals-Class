@@ -9,7 +9,8 @@
  */
 
 import java.util.Scanner;
-import biblioteca.Biblioteca;
+
+import library.library;
 
 public class Exercicio5 {
 
@@ -34,7 +35,7 @@ public class Exercicio5 {
             System.out.println("Digite o mês do seu aniversário: ");
             mesAniversario = scan.nextInt();
 
-            Biblioteca.verificaAniversario(diaAniversario, mesAniversario, diaHoje, mesHoje, anoHoje);
+            library.verificaAniversario(diaAniversario, mesAniversario, diaHoje, mesHoje, anoHoje);
 
             if ((mesAniversario==mesHoje)&&(diaAniversario==diaHoje)) quantAniversarioHoje++;
         }

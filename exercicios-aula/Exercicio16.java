@@ -6,7 +6,7 @@
  * @version: 26.04.2023
  */
 
- import biblioteca.Biblioteca;
+ import library.library;
   
   public class Exercicio16{
  
@@ -15,7 +15,7 @@
         int quantPalindromo = 0;
 
         for (int count = 0; count < 2000; count++){
-            if (Biblioteca.verificaPalindromo(count)) quantPalindromo++;
+            if (library.verificaPalindromo(count)) quantPalindromo++;
         }
 
         System.out.println("A quantidade de números palíndromos foi " + quantPalindromo);

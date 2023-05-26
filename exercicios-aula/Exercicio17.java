@@ -5,7 +5,7 @@
  * @version: 26.04.2023
  */
 
- import biblioteca.Biblioteca;
+ import library.library;
   
   public class Exercicio17{
  
@@ -15,7 +15,7 @@
         int count = 0;
 
         while (quantPalindromo < 10){
-            if (Biblioteca.verificaPalindromo(count)){
+            if (library.verificaPalindromo(count)){
                 quantPalindromo++; 
                 System.out.println("Número palíndromo: " + count);
             }
