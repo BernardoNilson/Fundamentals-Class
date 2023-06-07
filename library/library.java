@@ -10,6 +10,7 @@ package library;
 
  public class library{
 
+
     //Métodos para cálculo da área.
     public static double areaCirculo(double raioC){
         return Math.PI*Math.pow(raioC, 2);
