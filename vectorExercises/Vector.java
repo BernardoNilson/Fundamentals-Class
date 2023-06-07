@@ -145,8 +145,8 @@ public class Vector {
             }
         }
 
-        System.out.println("Even quantity is " + even);
-        System.out.println("Odd quantity is " + odd);
+        System.out.println("Even quantity is ");
+        System.out.println("Odd quantity is ");
     }
 
     public static void showContent(double[] vector) {
