@@ -5,7 +5,7 @@ package library;
  * A mesma possui diversos métodos genéricos.
  * 
  * @author: Bernardo Nilson 
- * @version: 18.04.2023
+ * @version: 25.06.2023
  */
 
  public class library{
@@ -376,5 +376,198 @@ package library;
         if ((numC < maior)&&(numC > menor)) meio = numC;
 
         System.out.println("A ordem decrescente dos números é " + maior + ", " + meio + " e " + menor);
+    }
+
+    // Métodos voltados para matrizes
+
+    // operacoes com vetores soma, sub, produto escalar, produto e div de vetores
+    // ordenacao de vetores
+    // 
+    public double [] somaVetores (double [] vetorA, double [] vetorB) {
+        double [] soma = new double [vetorA.length];
+
+        for (int i = 0; i < soma.length; i++) {
+            soma [i] = vetorA [i] + vetorB [i];
+        }
+
+        return soma;
+    }
+
+    public double [] subtraiVetores (double [] vetorA, double [] vetorB) {
+        double [] sub = new double [vetorA.length];
+
+        for (int i = 0; i < sub.length; i++) {
+            sub [i] = vetorA [i] - vetorB [i];
+        }
+
+        return sub;
+    }
+
+    public double [] multiplicaVetores (double [] vetorA, double [] vetorB) {
+        double [] mult = new double [vetorA.length];
+
+        for (int i = 0; i < mult.length; i++) {
+            mult [i] = vetorA [i] * vetorB [i];
+        }
+
+        return mult;
+    }
+
+    public double [] divideVetores (double [] vetorA, double [] vetorB) {
+        double [] div = new double [vetorA.length];
+
+        for (int i = 0; i < div.length; i++) {
+            div [i] = vetorA [i] / vetorB [i];
+        }
+
+        return div;
+    }
+
+    public double calculaProdutoEscalar (double [] vetor) {
+        double produto = 1;
+
+        for (int i = 0; i < vetor.length; i++) {
+            produto *= vetor [i];
+        }
+
+        return produto;
+    }
+
+
+    public double maiorNumeroVetor (double [] vetor) {
+        double aux = 0;
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor [i] > aux) {
+                aux = vetor [i];
+            }
+        }
+        return aux;
+    }
+
+    public double menorNumeroVetor (double [] vetor) {
+        double aux = vetor [0];
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor [i] < aux) {
+                aux = vetor [i];
+            }
+        }
+        return aux;
+    }
+
+    public double produtoDiagonalPrincipal (double [][] matriz) {
+        double produto = 1;
+        for (int i = 0; i < matriz.length; i++) {
+            produto *= matriz [i][i];
+        }
+        return produto;
+    }
+
+    public double produtoDiagonalSecundaria (double [][] matriz) {
+        double produto = 1;
+        for (int i = 0; i < matriz.length; i++) {
+            produto *= matriz [i][matriz.length - 1 + i];
+        }
+        return produto;
+    }
+
+    public double somaDiagonalPrincipal (double [][] matriz) {
+        double soma = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            soma += matriz [i][i];
+        }
+        return soma;
+    }
+
+    public double somaDiagonalSecundaria (double [][] matriz) {
+        double soma = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            soma += matriz [i][matriz.length - 1 + i];
+        }
+        return soma;
+    }
+
+    public double [] jogaNoVetor (double [][] matriz) {
+        int linha = matriz.length;
+        int coluna = matriz[0].length;
+        int tamanho = linha * coluna;
+        double [] vetor = new double [tamanho];
+
+        int count = 0;
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < coluna; j++) {
+                vetor [count] = matriz [i][j];
+                count++;
+            }
+        }
+        return vetor;
+    }
+
+    public double [][] jogaNaMatriz (double [] vetor, int linha, int coluna) {
+        double [][] matriz = new double [linha][coluna];
+
+        int count = 0;
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < coluna; j++) {
+                matriz [i][j] = vetor [count];
+                count++;
+            }
+        }
+
+        return matriz;
+    }
+
+    public void imprimeMatriz (double [][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print("[" + matriz[i][j] + "]" + " ");
+            }
+        }
+
+    }
+
+    public void imprimeVetor (double [] vetor) {
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print("[" + vetor[i] + "]" + " ");
+        }
+    }
+
+    public double [] bubbleSort (double [] vetor) {
+        double aux = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+            for (int j = 0; j < vetor.length - 1; j++) {
+                if (vetor[j] > vetor[j+1]) {
+                    aux = vetor[j];
+                    vetor[j] = vetor[j+1];
+                    vetor[j+1] = aux;
+                }
+            }
+        }
+        return vetor;
+    }
+
+    public double [] quickSort(double [] vetor, int esquerda, int direita) { 
+        int esq = esquerda;  
+        int dir = direita;  
+        double pivo = vetor[(esq + dir) / 2];  
+        double aux;  
+  
+        while (esq <= dir) {  
+
+            while (vetor[esq] < pivo) { esq++; }  
+            while (vetor[dir] > pivo) { dir--; }  
+
+            if (esq <= dir) {  
+                aux = vetor[esq];  
+                vetor[esq] = vetor[dir];  
+                vetor[dir] = aux;  
+                esq++;  
+                dir--;  
+            }  
+        }  
+
+        if (dir > esquerda) quickSort(vetor, esquerda, dir);  
+        if (esq < direita) quickSort(vetor, esq, direita);  
+        return vetor;
     }
 }
